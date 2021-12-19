@@ -35,7 +35,15 @@ class HomePage extends StatelessWidget {
                       radius: 40.w,
                       percent: 0.7,
                       lineWidth: 5.w,
-                      progressColor: Colors.amberAccent,
+                      animation: true,
+                      animateFromLastPercent: true,
+                      rotateLinearGradient: true,
+                      linearGradient: const LinearGradient(colors: [
+                        Colors.purple,
+                        Colors.amberAccent,
+                        Colors.cyan,
+                        Colors.redAccent,
+                      ]),
                       center: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -97,7 +105,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               '180GB',
                               style: Theme.of(context).textTheme.subtitle2,
-                            )
+                            ),
                           ],
                         ),
                       ],
@@ -105,7 +113,17 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            Column(children: [
+              GridView.builder(
+                  shrinkWrap: true,
+                  itemCount: 4,
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200),
+                  itemBuilder: (context, index) {
+                    return const Card();
+                  })
+            ])
           ],
         ));
   }

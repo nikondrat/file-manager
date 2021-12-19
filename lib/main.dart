@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.dark,
         home: const HomePage(),
         theme: ThemeData(
             canvasColor: Colors.grey.shade100,
