@@ -31,12 +31,76 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(24),
                     child: CircularPercentIndicator(
-                      backgroundColor: Colors.grey,
-                      startAngle: 45,
+                      backgroundColor: Theme.of(context).backgroundColor,
                       radius: 40.w,
-                      percent: 0.5,
-                      lineWidth: 14,
+                      percent: 0.7,
+                      lineWidth: 5.w,
+                      progressColor: Colors.amberAccent,
+                      center: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '70%',
+                            style: TextStyle(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .color,
+                                fontSize: 8.w,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'Used',
+                            style: TextStyle(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .headline6!
+                                    .color,
+                                fontSize: 5.w),
+                          )
+                        ],
+                      ),
                       circularStrokeCap: CircularStrokeCap.round,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 24),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Total Space',
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              '256GB',
+                              style: Theme.of(context).textTheme.subtitle2,
+                            )
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Used',
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              '180GB',
+                              style: Theme.of(context).textTheme.subtitle2,
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   )
                 ],

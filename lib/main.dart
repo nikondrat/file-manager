@@ -14,16 +14,26 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.dark,
         home: const HomePage(),
         theme: ThemeData(
             canvasColor: Colors.grey.shade100,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             hoverColor: Colors.transparent,
+            backgroundColor: Colors.grey,
+            textTheme: TextTheme(
+                headline5: TextStyle(color: Colors.purple.shade700),
+                headline6: TextStyle(color: Colors.black54, fontSize: 4.w),
+                subtitle2: TextStyle(
+                    color: Colors.purple.shade700,
+                    fontSize: 6.w,
+                    fontWeight: FontWeight.bold)),
             cardTheme: CardTheme(
                 color: Colors.white,
+                elevation: 6,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12))),
+                    borderRadius: BorderRadius.circular(24))),
             appBarTheme: const AppBarTheme(
                 backgroundColor: Colors.transparent,
                 elevation: 0,
@@ -33,10 +43,20 @@ class MyApp extends StatelessWidget {
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             hoverColor: Colors.transparent,
+            backgroundColor: Colors.grey.withAlpha(140),
+            textTheme: TextTheme(
+                headline5: const TextStyle(color: Colors.white),
+                headline6:
+                    TextStyle(color: Colors.grey.shade400, fontSize: 4.w),
+                subtitle2: TextStyle(
+                    color: Colors.white,
+                    fontSize: 6.w,
+                    fontWeight: FontWeight.bold)),
             cardTheme: CardTheme(
+                elevation: 6,
                 color: Colors.grey.shade800,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12))),
+                    borderRadius: BorderRadius.circular(24))),
             appBarTheme: const AppBarTheme(
                 backgroundColor: Colors.transparent,
                 elevation: 0,
