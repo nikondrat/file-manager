@@ -15,8 +15,7 @@ class HomePage extends StatelessWidget {
     ];
     double width = MediaQuery.of(context).size.width;
 
-    Widget myCard = Container(
-        child: Card(
+    Widget myCard = Card(
       child: Column(
         children: [
           Padding(
@@ -93,7 +92,7 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-    ));
+    );
 
     return Scaffold(
         appBar: AppBar(
