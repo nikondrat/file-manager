@@ -23,14 +23,14 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.grey,
             textTheme: TextTheme(
                 headline5: TextStyle(color: Colors.purple.shade700),
-                headline6: TextStyle(color: Colors.black54, fontSize: 4.w),
+                headline6: TextStyle(color: Colors.black54, fontSize: 18.sp),
                 subtitle2: TextStyle(
                     color: Colors.purple.shade700,
-                    fontSize: 6.w,
+                    fontSize: 22.sp,
                     fontWeight: FontWeight.bold)),
             cardTheme: CardTheme(
                 color: Colors.white,
-                elevation: 6,
+                elevation: 2,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(24))),
             appBarTheme: const AppBarTheme(
@@ -46,13 +46,13 @@ class MyApp extends StatelessWidget {
             textTheme: TextTheme(
                 headline5: const TextStyle(color: Colors.white),
                 headline6:
-                    TextStyle(color: Colors.grey.shade400, fontSize: 4.w),
+                    TextStyle(color: Colors.grey.shade400, fontSize: 18.sp),
                 subtitle2: TextStyle(
                     color: Colors.white,
-                    fontSize: 6.w,
+                    fontSize: 22.sp,
                     fontWeight: FontWeight.bold)),
             cardTheme: CardTheme(
-                elevation: 6,
+                elevation: 2,
                 color: Colors.grey.shade800,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(24))),
